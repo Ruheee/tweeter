@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #EF3054;
+  background-image:url(./arches.png) ;
+  color: #FFFFFF;
+  height: 120px;
+  width: 100%;
+  position: fixed;
+}
+
+nav span{
+  font-family: Bungee;
+  margin: 1.5em;
+}
+
+nav div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1.5em;
+}
+

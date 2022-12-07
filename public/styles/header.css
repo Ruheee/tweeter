@@ -1,0 +1,15 @@
+header {
+  height: 520px;
+  width: 100%;
+  background-color: #FFBC42;
+    background-image:url(./arches.png);
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+
