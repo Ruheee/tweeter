@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -19,7 +22,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/header.css">
-    
+    <link rel="stylesheet" href="./styles/new-tweet.css">
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -30,9 +33,9 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span>Tweeter</span>
       <div>
-        <div>write a new tweet</div>
+        <div> Write a new tweet</div>
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
@@ -46,10 +49,19 @@
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p class="box">hello</p>
-      <h1 class="box">hello</h1>
-      <h2 class="box">hello</h2>
-
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets" method="POST">
+          <div class="tweet-area">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+          </div>
+          <div class="button-counter">
+            <button type="submit" class="btn">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
 
   </body>
