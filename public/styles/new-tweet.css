@@ -1,0 +1,50 @@
+/*Container for tweet box*/
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F0F6;
+  padding: 5px 15px;
+} 
+
+/*Container for label and textarea*/
+.tweet-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 5px solid black;
+}
+
+/* targets textarea only */
+.tweet-area textarea {
+  background:transparent;
+  outline:none;
+  border:none;
+  width:100%;
+  font-size: 16px;
+} 
+
+/* Container for button and character counter */
+.button-counter {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-family: Bungee;
+} 
+
+/* Class to target button specifically */
+.btn {
+  background-color: #EF3054;
+  color: white;
+  padding: 5px;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-style: none;
+} 
+
+.btn:hover{
+  background-color: #FFBC42;
+}
+
+
+
