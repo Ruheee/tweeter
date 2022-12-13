@@ -23,24 +23,24 @@
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/new-tweet.css">
+    <link rel="stylesheet" href="./styles/tweet-box.css">
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
     <nav>
       <span>Tweeter</span>
-      <div class="navWrite">
+      <div class="nav-write-tweet">
         <div> <strong>Write </strong>a new tweet</div>
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header>
+    <header class="profile-header">
       <div>
         <img src="./images/profile-hex.png" alt="User Profile Photo">
       </div>
@@ -50,6 +50,7 @@
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
+
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
@@ -63,7 +64,54 @@
           </div>
         </form>
       </section>
-    </main>
+      
+      <section>
+        <article class="tweet-container">
+          <header class="img-tweet-container">
+            <div class="user-info">
+              <div class="avatar-name">
+                <img src="./images/cristiano-ronaldo-portuguese-professional-footballer-who-plays-as-forward-club-manchester-united-portugal-national-260687672.jpeg" alt="">
+                <p>Cristiano Ronaldo</p>
+              </div>
+              <p class="state">@CristianoRonaldo</p>
+            </div>
+              <p class="tweet">If I have seen further it is by standing on the shoulders of giants</p>
+          </header>
+          <footer class="time-retweet">
+            <p>10 days ago</p>
+            <div>
+              <i class="fa-solid fa-flag state"></i>
+              <i class="fa-solid fa-retweet state"></i>
+              <i class="fa-solid fa-heart state"></i>
+            </div>
+          </footer>
+        </article>
 
+        <article class="tweet-container">
+          <header class="img-tweet-container">
+            <div class="user-info">
+              <div class="avatar-name">
+                <img src="./images/roger-federer.jpeg" alt="">
+                <p>Roger Federer</p>
+              </div>
+              <p class="state">@RogerFederer</p>
+            </div>
+              <p class="tweet">I'm a very positive thinker, and I think that is what helps me the most in difficult moments. I have learnt to be even more patient. When you do something best in life, you don't really want to give that up - and for me it's tennis.</p>
+          </header>
+          <footer class="time-retweet">
+            <p>12 days ago</p>
+            <div>
+              <i class="fa-solid fa-flag state"></i>
+              <i class="fa-solid fa-retweet state"></i>
+              <i class="fa-solid fa-heart state"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
+
+      
+      
+
+    </main>
   </body>
 </html>

@@ -1,8 +1,9 @@
-header {
+/* Styling for header */
+.profile-header {
   height: 520px;
   width: 100%;
-  background-color: #FFBC42;
-  background-image: url("http://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
+  background-color: #f56038;
+  background-image: url("https://www.transparenttextures.com/patterns/debut-light.png");
   padding-top: 120px;
   display: flex;
   flex-direction: column;
