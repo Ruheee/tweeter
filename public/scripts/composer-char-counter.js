@@ -7,8 +7,9 @@ $(document).ready(function() {
     $('.counter').html(remainingCharacters);
     if (userInput.length > 140) {
       $('.counter').css('color', 'red');
+      alert("Text too long")
     } else {
-      $('.counter').css('color', '#A54657');
+      $('.counter').css('color', '#545149');
     }
   });
 });
