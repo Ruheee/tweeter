@@ -7,9 +7,10 @@ $(document).ready(function() {
     $('.counter').text(remainingCharacters);
     if (userInput.length > 140) {
       $('.counter').css('color', 'red');
-      alert("Text too long")
+      $('.error-msg').slideDown('fast').text(`⚠️ More than 140 characters!`)
     } else {
       $('.counter').css('color', '#545149');
+      $('.error-msg').slideUp('fast')
     }
   });
 });

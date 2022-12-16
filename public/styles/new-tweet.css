@@ -17,7 +17,7 @@
 /* targets textarea only */
 .tweet-area textarea {
   background:transparent;
-  outline:none;
+  outline: none;
   border:none;
   width:100%;
   font-size: 16px;
@@ -47,4 +47,12 @@
   background-color: #f56038;
 }
 
+.error-msg {
+  color: #ba3939;
+  background: #ffe0e0;
+  border: 1px solid #a33a3a;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: none;
+}
 

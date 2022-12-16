@@ -57,10 +57,11 @@ $(document).ready(function() {
     event.preventDefault(event);
     // checks if the text area is empty
     if ($('#tweet-text').val().length === 0) {
-      alert("Nothing typed")
+      $('.error-msg').slideDown(600).text(`⚠️ Cant submit empty field`)
     } else {
       // if the character counter is = to or < than 140 the tweet will post, then load the posted tweet, then empty the textarea
       if ($('#tweet-text').val().length <= 140) {
+        $('.error-msg').slideUp(600)
         $.ajax({
           url: "/tweets",
           method: "POST",
@@ -68,8 +69,8 @@ $(document).ready(function() {
         })
         .then(loadTweets)
         .then($('#tweet-text').val(''))
+        .then($('.button-counter').parent().find('.counter').text('140'))
       }
-      
     }
   });
 
