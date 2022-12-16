@@ -6,6 +6,7 @@
 
 
 $(document).ready(function() {
+  // cretes element in HTML
    const createTweetElement = (tweetObj) => {
     const $tweet = $(`<article class="tweet-container">
     <header class="img-tweet-container">
@@ -29,7 +30,7 @@ $(document).ready(function() {
   </article>`)
   return $tweet
    };
-
+   // orders tweets from newest to oldest then uses createTweeet as a callback then renders that tweet on the page
    const renderTweets = (tweets) => {
     $('#adds-tweets').empty()
     tweets = tweets.sort((a, b) => {
@@ -41,6 +42,7 @@ $(document).ready(function() {
     }
   };
 
+  // function that does an AJAX GET request from /tweets route then renders the data (tweet)
   const loadTweets = () => {
     $.ajax({
       url: "/tweets",
@@ -50,12 +52,14 @@ $(document).ready(function() {
       renderTweets(data);
     })
 }
-
+  // looks for a form and once the event submit has been activated, it runs the following function
   $('form').submit(function(event) {
     event.preventDefault(event);
+    // checks if the text area is empty
     if ($('#tweet-text').val().length === 0) {
       alert("Nothing typed")
     } else {
+      // if the character counter is = to or < than 140 the tweet will post, then load the posted tweet, then empty the textarea
       if ($('#tweet-text').val().length <= 140) {
         $.ajax({
           url: "/tweets",
