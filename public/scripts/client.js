@@ -4,6 +4,11 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 $(document).ready(function() {
   // cretes element in HTML
@@ -17,7 +22,7 @@ $(document).ready(function() {
         </div>
         <p class="state">${tweetObj['user'].handle}</p>
       </div>
-        <p class="tweet">${tweetObj['content'].text}</p>
+        <p class="tweet">${escape(tweetObj['content'].text)}</p>
     </header>
     <footer class="time-retweet">
       <p>${timeago.format(tweetObj["created_at"])}</p>
@@ -32,7 +37,7 @@ $(document).ready(function() {
    };
    // orders tweets from newest to oldest then uses createTweeet as a callback then renders that tweet on the page
    const renderTweets = (tweets) => {
-    $('#adds-tweets').empty()
+    $('#adds-tweets').empty();
     tweets = tweets.sort((a, b) => {
       return b.created_at - a.created_at
     })
@@ -48,7 +53,7 @@ $(document).ready(function() {
       url: "/tweets",
       method: "GET",
     })
-    .then(data => {
+    .then( data => {
       renderTweets(data);
     })
 }
@@ -67,13 +72,13 @@ $(document).ready(function() {
           method: "POST",
           data: $('form').serialize()
         })
-        .then(loadTweets)
-        .then($('#tweet-text').val(''))
-        .then($('.button-counter').parent().find('.counter').text('140'))
+        .then(loadTweets)//  loads tweet on screen after tweet is submitted
+        .then($('#tweet-text').val(''))// clears the textarea after submission
+        .then($('.counter').text('140'))// resets counter after submission
       }
     }
   });
-
+  
   loadTweets();
 });
  

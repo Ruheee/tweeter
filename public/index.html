@@ -42,37 +42,35 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header class="profile-header">
-      <div>
-        <img src="./images/profile-hex.png" alt="User Profile Photo">
-      </div>
-      <div>
-        <h2>Rui Dantas</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-
-      <section class="new-tweet">
-        <p class="error-msg"></p>
-        <form action="/tweets" method="POST">
-          <div class="tweet-area">
-            <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
-          </div>
-          <div class="button-counter">
-            <button type="submit" class="btn">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section id ="adds-tweets">
-        
-      </section>
-
+    <div class="desktop">
+      <header class="profile-header">
+        <div>
+          <img src="./images/profile-hex.png" alt="User Profile Photo">
+        </div>
+        <div>
+          <h2>Rui Dantas</h2>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <p class="error-msg"></p>
+          <form action="/tweets" method="POST">
+            <div class="tweet-area">
+              <label for="tweet-text">What are you humming about?</label>
+              <textarea name="text" id="tweet-text"></textarea>
+            </div>
+            <div class="button-counter">
+              <button type="submit" class="btn">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section id ="adds-tweets">
+          <!-- Tweet gets added in here with Jquery, located in the client.js -->
+        </section>
       
-      
-
-    </main>
+        </main>
+      </div>
   </body>
 </html>

@@ -8,6 +8,7 @@ nav {
   height: 120px;
   width: 100%;
   position: fixed;
+  padding: 0 20px;
 }
 
 nav span{
@@ -18,7 +19,8 @@ nav span{
 .nav-write-tweet{
   display: flex;
   flex-direction: column;
+  justify-content: baseline;
   align-items: center;
-  margin: 0 1.5em;
+  font-size: 16px;
 }
 
