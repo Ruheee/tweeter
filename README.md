@@ -18,7 +18,11 @@ This app provides the user with the ability to post tweets to a Tweet feed. This
 
 ## Screen recording 
 
-[Screen Recording](./public/images/Screen%20Recording%202023-01-09%20at%2011.18.36%20AM.mov)
+
+
+https://user-images.githubusercontent.com/98766093/211358870-19405a0a-b74f-4814-989a-2d36de29c8ee.mov
+
+
 
 ## Getting Started
 
