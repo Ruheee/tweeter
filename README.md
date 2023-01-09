@@ -18,12 +18,7 @@ This app provides the user with the ability to post tweets to a Tweet feed. This
 
 ## Screen recording 
 
-["Main Page"](./public/images/Main-Desktop.png)
-["Character Counter"](./public/images/Character-Counter.png)
-["Posted Tweet"](./public/images/Tweet-Posted.png)
-["Empty Field Error"](./public/images/Empty-Field.png)
-["Tweet too long drop down error with red counter"](./public/images/Tweet-too-long.png)
-["Mobile version"](./public/images/Mobile-version.png)
+[Screen Recording](./public/images/Screen%20Recording%202023-01-09%20at%2011.18.36%20AM.mov)
 
 ## Getting Started
 
